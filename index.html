@@ -347,11 +347,6 @@
     </div>
 
     <script>
-        // ========== 配置项（已修改为你的GitHub用户名 MIXHS） ==========
-        const GITHUB_CONFIG = {
-            username: "MIXHS",       // 你的GitHub用户名（大写 MIXHS）
-            repoName: "txm.github.io" // 你的仓库名
-        };
 
         // ========== 宠物孵蛋组数据 ==========
         const petEggGroupData = [
@@ -551,17 +546,10 @@
             return dom.petSearch.value.trim();
         }
 
-        /**
-         * 获取宠物图片URL（适配GitHub Pages，已用你的用户名 MIXHS）
-         * @param {string} petName 宠物名称
-         * @returns {string} 图片完整URL
-         */
         function getPetImgUrl(petName) {
-            // 构建GitHub Pages完整图片路径（用户名已改为 MIXHS）
-            const baseUrl = `https://${GITHUB_CONFIG.username}.github.io/${GITHUB_CONFIG.repoName}/pet-img/`;
-            // 中文编码处理，避免路径错误
+            const basePath = "./pet-img/";
             const encodedName = encodeURIComponent(petName);
-            return `${baseUrl}${encodedName}.png`;
+            return `${basePath}${encodedName}.png`;
         }
 
         /**
