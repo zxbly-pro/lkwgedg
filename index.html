@@ -547,14 +547,10 @@
         const matchList = document.getElementById("matchList");
 
         // 工具函数
-        function getActiveGroup() {
-            return document.querySelector(".egg-group-tab.active").dataset.group;
-        }
-        function getSearchText() {
-            return document.getElementById("petSearch").value.trim();
-        }
         function getPetImgUrl(petName) {
-            return `/pet-img/${petName}.png`;
+                // 适配 GitHub Pages 仓库路径：用户名.github.io/仓库名/
+                // 把 mixhs 改成你的 GitHub 用户名！！！
+                return `https://mixhs.github.io/txm.github.io/pet-img/${petName}.png`;
         }
 
         // 渲染宠物列表（支持多组别筛选）
